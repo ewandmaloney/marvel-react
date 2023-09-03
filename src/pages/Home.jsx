@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import BestCharacters from "../components/BestCharacters";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <BestCharacters></BestCharacters>
+    </>
+  );
+};
 
-export default Home
+export default Home;
