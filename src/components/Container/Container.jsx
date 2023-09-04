@@ -2,9 +2,9 @@ import React from "react";
 import "./Container.scss";
 import { Container as Content } from "semantic-ui-react";
 
-const Container = ({ children }) => {
+const Container = ({ children, bg }) => {
   return (
-    <div className="container-bg">
+    <div className={bg !== "light" ? "container-bg" : null}>
       <Content>{children}</Content>
     </div>
   );
