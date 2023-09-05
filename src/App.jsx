@@ -8,12 +8,11 @@ import Series from "./pages/Series";
 import Header from "./components/Header";
 import useFetch from "./hooks/useFetch";
 
+
 function App() {
   const exampleAPI = useFetch(
     "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec"
   );
-
-  console.log(exampleAPI);
 
   return (
     <div>
