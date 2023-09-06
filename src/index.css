@@ -32,6 +32,16 @@ code {
   text-transform: uppercase;
 }
 
+.characters-page .header {
+  margin-left: 0 !important;
+  margin-top: 30px !important;
+  margin-bottom: 25px !important;
+  font: 800 26px/1 "RobotoCondensed", "Trebuchet MS", Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 #slide-comics-image {
   padding: 50px 0;
   width: 100%;
@@ -46,6 +56,22 @@ code {
   background-image: url(./img/last-movies.jpeg);
   height: 350px;
   background-position: top;
+}
+
+#slide-characters-image {
+  padding: 50px 0;
+  width: 100%;
+  background-image: url(./img/personajes_marvel.jpg);
+  height: 350px;
+  background-position: top;
+}
+
+.search-character{
+  width: 25%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 5px;
+
 }
 
 .error-404 {

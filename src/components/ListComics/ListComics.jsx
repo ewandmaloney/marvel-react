@@ -2,29 +2,36 @@ import React from "react";
 import { Dimmer, Loader, Card, Image, Icon, Button } from "semantic-ui-react";
 import "./ListComics.scss";
 
-const ListComics = ({ listComics, renderComics, setRenderComics }) => {
+const ListComics = ({
+  listComics,
+  renderComics,
+  setRenderComics,
+  comic,
+  setUrl,
+}) => {
   const { loading, result } = listComics;
 
-  if (loading || !result)
+  if (loading || !result || !comic)
     return (
       <Dimmer active inverted>
         <Loader inverted>Loading...</Loader>
       </Dimmer>
     );
 
-  const { results } = result.data;
-
   const loadMoreComics = () => {
     const numberComics = renderComics;
+    setUrl(
+      `https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec&orderBy=focDate&limit=${
+        numberComics + 5
+      }`
+    );
     setRenderComics(numberComics + 5);
   };
 
-  console.log(results);
-
   return (
     <Card.Group itemsPerRow={5}>
-      {results.map((res, index) => (
-        <Card key={index} className="list-comics">
+      {comic.map((res, index) => (
+        <Card key={index} className="list-comics fadeIn">
           <Image
             src={`${res.images[0].path}.${res.images[0].extension}`}
             wrapped

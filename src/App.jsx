@@ -6,14 +6,9 @@ import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Series from "./pages/Series";
 import Header from "./components/Header";
-import useFetch from "./hooks/useFetch";
-
+import AllCharacters from "./pages/AllCharacters";
 
 function App() {
-  const exampleAPI = useFetch(
-    "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec"
-  );
-
   return (
     <div>
       <BrowserRouter>
@@ -23,6 +18,7 @@ function App() {
           <Route path="/inicio" element={<Home />} />
           <Route path="/comics" element={<Comics />} />
           <Route path="/series" element={<Series />} />
+          <Route path="/characters" element={<AllCharacters />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>

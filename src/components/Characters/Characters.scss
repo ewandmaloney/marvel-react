@@ -1,0 +1,12 @@
+.list-characters{
+    cursor: pointer;
+
+    .header{
+        height: 60px;
+    }
+
+    .image{
+        height: 300px;
+        display: flex !important;
+    }
+}
