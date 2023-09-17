@@ -22,14 +22,14 @@ const ListComics = ({
     const numberComics = renderComics;
     setUrl(
       `https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec&orderBy=focDate&limit=${
-        numberComics + 5
+        numberComics + 4
       }`
     );
-    setRenderComics(numberComics + 5);
+    setRenderComics(numberComics + 4);
   };
 
   return (
-    <Card.Group itemsPerRow={5}>
+    <Card.Group itemsPerRow={4} stackable={true}>
       {comic.map((res, index) => (
         <Card key={index} className="list-comics fadeIn">
           <Image

@@ -56,22 +56,22 @@ const Characters = ({
     if (!name) {
       setUrl(
         `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec&orderBy=name&limit=${
-          newLimit + 5
+          newLimit + 4
         }}`
       );
     } else {
       setUrl(
         `https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=838dd71c46e8209232ac75a7fae17f0a&hash=86347a5a0933c7668958401d1ad9d3ec&nameStartsWith=${name}&orderBy=name&limit=${
-          newLimit + 5
+          newLimit + 4
         }`
       );
     }
-    setLimit(newLimit + 5);
+    setLimit(newLimit + 4);
   };
   console.log(item);
 
   return (
-    <Card.Group itemsPerRow={5}>
+    <Card.Group itemsPerRow={4} stackable>
       {character.map((res, index) => (
         <Card
           key={index}

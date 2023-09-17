@@ -15,7 +15,7 @@ const ListSeries = ({ listSeries }) => {
   const { results } = result.data;
 
   return (
-    <Card.Group itemsPerRow={5}>
+    <Card.Group itemsPerRow={4} stackable={true}>
       {results.map((res, index) => (
         <Card key={index} className="list-series">
           <Image
